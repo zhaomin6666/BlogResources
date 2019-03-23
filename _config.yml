@@ -81,7 +81,7 @@ theme: hexo-theme-icarus-master
 deploy:
 - type: git
   repository: https://github.com/zhaomin6666/zhaomin6666.github.io.git
-  branch: master
+  branch: resource
 - type: git
   repository: https://git.dev.tencent.com/zm666/MYBLOG.git
   branch: master
