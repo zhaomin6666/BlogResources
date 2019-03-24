@@ -99,7 +99,7 @@ live2d:
 deploy:
 - type: git
   repository: https://github.com/zhaomin6666/zhaomin6666.github.io.git
-  branch: resource
+  branch: master
 - type: git
   repository: https://git.dev.tencent.com/zm666/MYBLOG.git
   branch: master
