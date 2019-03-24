@@ -13,9 +13,9 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://zm666.coding.me/MYBLOG/
-root: /MYBLOG
-permalink: :year/:month/:day/:title/
+url: https://zhaomin6666.github.io/;
+root: /
+permalink: :year:month:day/:title/
 permalink_defaults:
 
 # Directory
@@ -97,9 +97,9 @@ live2d:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
+  type: git
   repository: https://github.com/zhaomin6666/zhaomin6666.github.io.git
   branch: master
-- type: git
-  repository: https://git.dev.tencent.com/zm666/MYBLOG.git
-  branch: master
+#- type: git
+#  repository: https://git.dev.tencent.com/zm666/MYBLOG.git
+#  branch: master
