@@ -15,7 +15,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://zhaomin6666.github.io/;
 root: /
-permalink: :year:month:day/:title/
+permalink: :category/:title/
 permalink_defaults:
 
 # Directory
@@ -92,7 +92,7 @@ live2d:
     width: 150
     height: 300
   mobile:
-    show: true
+    show: false
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
