@@ -51,6 +51,17 @@ $ echo '\n#alias for cnpm\nalias cnpm="npm --registry=https://registry.npm.taoba
 
 ## 安装 [Git](https://git-scm.com/)
 Git是用来做项目版本管理的，[下载链接](https://gitforwindows.org/)下载安装之后，以后的命令尽量在GitBash中输入。
+<b>如果不把源代码上传，那么后面自己用不到git命令，`hexo deploy`命令会调用git上传到你配置的git仓库。</b>但是如果自己有两台以上电脑，或者需要在本地两个地方存放的话（在配置网址时可能需要国内一个网站，国外一个网站），就需要将博客的源代码上传git，保证各工作空间代码一致。
+
+首先我们新建一个仓库如下：
+Repository name （仓库名称）: BlogResources
+Description （描述，可填）: MyBlogTest
+可以选择为Public对所有人可见或者选择Private私有
+勾选Initialize this repository with a README，生成一个描述文件
+.gitignore是上传时的忽略文件，这个可以后面修改添加，不急
+Add a license可以使用MIT License
+<img src="https://zm666.coding.me/MYBLOG/images/postimages/HexoGuide/1.png" style="zoom:50%">
+
 ```Java
 // TODO 常用Git命令
 ```
@@ -77,6 +88,8 @@ hexo server
 
 至此你的博客在本地已经搭建好了，总算是完成了第一步。
 ---- 2019年3月26日更新
+
+## 申请自己的域名（可选）
 
 以下是测试图片
 <img src="https://zm666.coding.me/MYBLOG/images/my-avatar.jpg" style="zoom:50%">
