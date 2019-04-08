@@ -60,7 +60,7 @@ Description （描述，可填）: MyBlogTest
 勾选Initialize this repository with a README，生成一个描述文件
 .gitignore是上传时的忽略文件，这个可以后面修改添加，不急
 Add a license可以使用MIT License
-<img src="https://zm666.coding.me/MYBLOG/images/postimages/HexoGuide/1.png" style="zoom:50%">
+<img src="../../images/postimages/HexoGuide/1.png" style="zoom:50%">
 创建完成之后先放着，后面再用。
 
 ###常用Git命令  
@@ -103,8 +103,6 @@ hexo init <folder>
 cd <folder>
 npm install
 ```
-<img src="https://zm666.coding.me/MYBLOG/images/postimages/HexoGuide/2.png" style="zoom:50%">
--------
 <img src="../../images/postimages/HexoGuide/2.png" style="zoom:50%">
 这样就初始化完成了，以后所有的Hexo命令都在这里执行。_config.yml是站点配置文件，theme/下的_config.yml是主题的配置文件。
 在路径下，命令行（即Git Bash）输入以下命令启动服务器：
@@ -116,6 +114,49 @@ hexo server //或hexo s
 
 至此你的博客在本地已经搭建好了。
 
-## 申请自己的域名（可选）
+## 申请自己的域名（可选）、使用GithubPages+CodingPages搭建博客
+1.在github上再新建一个仓库，仓库名为：`<Github账号名称>.github.io`
+2.将本地Hexo博客推送到GithubPages
+&emsp;2.1 安装hexo-deployer-git插件。在命令行（即Git Bash）运行以下命令即可：
+``` 
+npm install hexo-deployer-git --save
+```
+&emsp;2.2 添加SSH key
+&emsp;创建一个SSH key。在命令行（即Git Bash）输入以下命令， 回车三下即可：
+```
+ssh-keygen -t rsa -C "邮箱地址"
+```
+&emsp;添加到Github。复制密钥文件内容（路径形如`C:\Users\Administrator\.ssh\id_rsa.pub`），粘贴到Github网站Settings --> SSH and GPG keys --> New SSH Key即可。
 
+测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：
+```bash
+$ ssh -T git@github.com
+$ yes
+Hi zhaomin6666! You've successfully authenticated
+```
+&emsp;2.3 修改_config.yml（在站点目录下）。文件末尾修改为：
+```
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com:<Github账号名称>/<Github账号名称>.github.io.git
+  branch: master
+```
+&emsp;2.4 推送到GithubPages。在命令行（即Git Bash）依次输入以下命令， 返回INFO Deploy done: git即成功推送：
+```bash
+$ hexo g
+$ hexo d
+```
+等待1分钟左右，浏览器访问网址： `https://<Github账号名称>.github.io`
+如果失败了，尝试把_config.yml中的repo即repository改为`repository: https://github.com/zhaomin6666/zhaomin6666.github.io.git`，使用Https再次提交。这是会让你输账号密码，此处的密码在Settings --> Developer Settings --> Personal access tokens中生成。
 
+3.将本地Hexo博客推送到CodingPages
+和推送到Github差不多，都是使用托管平台的静态Pages。
+&emsp;3.1 创建[Coding](https://dev.tencent.com/)账号（腾讯云开发平台）
+&emsp;3.2 创建仓库，仓库名为：`<Coding账号名称>`
+&emsp;3.3 进入项目里 代码 --> Pages服务 中开启，稍等片刻CodingPages即可部署成功。
+&emsp;3.4 将本地Hexo博客推送到CodingPages
+
+----------
+更新日期 2019年4月8日
