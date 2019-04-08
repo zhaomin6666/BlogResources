@@ -51,7 +51,7 @@ $ echo '\n#alias for cnpm\nalias cnpm="npm --registry=https://registry.npm.taoba
 
 ## 安装 [Git](https://git-scm.com/)
 Git是用来做项目版本管理的，[下载链接](https://gitforwindows.org/)下载安装之后，以后的命令尽量在GitBash中输入。
-<b>如果不把源代码上传，那么后面自己用不到git命令，`hexo deploy`命令会调用git上传到你配置的git仓库。</b>但是如果自己有两台以上电脑，或者需要在本地两个地方存放的话（在配置网址时可能需要国内一个网站，国外一个网站），就需要将博客的源代码上传git，保证各工作空间代码一致。
+<b>如果不把源代码上传，那么后面自己用不到git命令，`hexo deploy`命令会调用git上传到你配置的git仓库。</b>但是如果自己有两台以上电脑，或者需要在本地两个地方存放的话（在配置网址时可能需要国内一个网站，国外一个网站，后面会说），就需要将博客的源代码上传git，保证各工作空间代码一致。
 
 首先我们新建一个仓库如下：
 Repository name （仓库名称）: BlogResources
@@ -61,9 +61,34 @@ Description （描述，可填）: MyBlogTest
 .gitignore是上传时的忽略文件，这个可以后面修改添加，不急
 Add a license可以使用MIT License
 <img src="https://zm666.coding.me/MYBLOG/images/postimages/HexoGuide/1.png" style="zoom:50%">
+创建完成之后先放着，后面再用。
 
-```Java
-// TODO 常用Git命令
+###常用Git命令  
+这里可能就能用到这么多，还有有关分支、合并的一些操作这里就不展开。
+```bash
+// 配置全局用户Name和E-mail
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+// 初始化仓库
+git init
+// 添加文件到Git仓库
+git add <file>  //可以使用git add . 添加当前目录
+// 提交添加的文件到Git仓库
+git commit  //然后会弹出一个vim编辑器输入提交说明
+// 或者直接
+git commit -m "你要输入的提交说明"
+// 查看仓库当前的状态
+git status
+// 查看历史提交记录
+git log
+// 或者加上参数查看
+git log --pretty=oneline
+// 关联Github远程库：
+git remote add origin https://github.com/zhaomin6666/MyTest.git
+// 推送到远程仓库
+git push -u origin master  //注意：第一次提交需要加一个参数-u
+// 查看远程库的信息
+git remote
 ```
 
 ## 安装 [Hexo](https://hexo.io/zh-cn/)
@@ -78,18 +103,19 @@ hexo init <folder>
 cd <folder>
 npm install
 ```
+<img src="https://zm666.coding.me/MYBLOG/images/postimages/HexoGuide/2.png" style="zoom:50%">
+-------
+<img src="../../images/postimages/HexoGuide/2.png" style="zoom:50%">
 这样就初始化完成了，以后所有的Hexo命令都在这里执行。_config.yml是站点配置文件，theme/下的_config.yml是主题的配置文件。
 在路径下，命令行（即Git Bash）输入以下命令启动服务器：
 ```bash
-hexo server
+hexo server //或hexo s
 ```
 
 浏览器访问网址： [http://localhost:4000/](http://localhost:4000/)
 
-至此你的博客在本地已经搭建好了，总算是完成了第一步。
----- 2019年3月26日更新
+至此你的博客在本地已经搭建好了。
 
 ## 申请自己的域名（可选）
 
-以下是测试图片
-<img src="https://zm666.coding.me/MYBLOG/images/my-avatar.jpg" style="zoom:50%">
+
