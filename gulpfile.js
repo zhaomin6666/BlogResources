@@ -1,15 +1,26 @@
 var gulp = require('gulp');
-var minifycss = require('gulp-minify-css');
+//var minifycss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var htmlclean = require('gulp-htmlclean');
 var imagemin = require('gulp-imagemin');
 // 压缩css文件
-gulp.task('minify-css', function() {
-  return gulp.src('./public/**/*.css')
-  .pipe(minifycss())
-  .pipe(gulp.dest('./public'));
+var minifyCss = require('gulp-clean-css');
+var pump = require('pump');
+
+gulp.task('cssmin',function(cb) {
+    pump([
+        gulp.src('./public/**/*.css'),
+        minifyCss(),
+        gulp.dest('./public')
+    ], cb
+    )
 });
+//.task('minify-css', function() {
+//  return gulp.src('./public/**/*.css')
+//  .pipe(minifycss())
+// .pipe(gulp.dest('./public'));
+//});
 // 压缩html文件
 gulp.task('minify-html', function() {
   return gulp.src('./public/**/*.html')
@@ -44,4 +55,4 @@ gulp.task('minify-images', async() => {
 //  'minify-html','minify-css','minify-js','minify-images'
 //]);
 
-gulp.task('default',gulp.series(gulp.parallel('minify-html','minify-css','minify-js','minify-images')));
+gulp.task('default',gulp.series(gulp.parallel('minify-html','cssmin','minify-js','minify-images')));

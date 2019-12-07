@@ -8,6 +8,7 @@
   "dependencies": {
     "connect": "^3.6.6",
     "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-htmlclean": "^2.7.22",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -23,7 +24,6 @@
     "hexo-pagination": "^0.1.0",
     "hexo-renderer-ejs": "^0.3.1",
     "hexo-renderer-kramed": "^0.1.4",
-    "hexo-renderer-marked": "^0.3.2",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3",
     "live2d-widget-model-hijiki": "^1.0.5",
