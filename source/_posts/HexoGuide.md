@@ -1,4 +1,4 @@
-﻿---
+---
 title: 使用Hexo+GitHubPage+CodingMe搭建一个博客
 date: 2019-03-25 22:44:15
 categories:
@@ -10,7 +10,6 @@ tags:
 
 * 本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议，转载请注明出处。
 * 本人是Java后端开发，想找个地方记录一些有用有意思的东西，自己又比较喜欢搞事情，就在网上找到了这种利用静态文件搭建一个博客的方法。按照网上的教程自己也遇到了一些问题，所以希望文章能够帮助到一些人，如有错误之处请多多指教。
-
 
 ---
 # 准备工作
@@ -98,6 +97,7 @@ npm install -g hexo-cli
 ```
 初始化Hexo：在本地某个目录下，新建一个文件夹folder
 右击Git Bash Here打开命令行工具，输入：
+
 ```bash
 hexo init <folder>
 cd <folder>
@@ -112,17 +112,21 @@ hexo server //或hexo s
 
 浏览器访问网址： [http://localhost:4000/](http://localhost:4000/)
 
-至此你的博客在本地已经搭建好了。
+至此你的最基本的博客在本地已经搭建好了。
+
+# 开始搭建博客
 
 ## 申请自己的域名（可选）、使用GithubPages+CodingPages搭建博客
 1.在github上再新建一个仓库，仓库名为：`<Github账号名称>.github.io`
 2.将本地Hexo博客推送到GithubPages
 &emsp;2.1 安装hexo-deployer-git插件。在命令行（即Git Bash）运行以下命令即可：
+
 ``` 
 npm install hexo-deployer-git --save
 ```
 &emsp;2.2 添加SSH key
 &emsp;创建一个SSH key。在命令行（即Git Bash）输入以下命令， 回车三下即可：
+
 ```
 ssh-keygen -t rsa -C "邮箱地址"
 ```
@@ -154,9 +158,53 @@ $ hexo d
 3.将本地Hexo博客推送到CodingPages
 和推送到Github差不多，都是使用托管平台的静态Pages。
 &emsp;3.1 创建[Coding](https://dev.tencent.com/)账号（腾讯云开发平台）
-&emsp;3.2 创建仓库，仓库名为：`<Coding账号名称>`
+&emsp;3.2 创建项目，项目名为：`<项目名称>`
 &emsp;3.3 进入项目里 代码 --> Pages服务 中开启，稍等片刻CodingPages即可部署成功。
 &emsp;3.4 将本地Hexo博客推送到CodingPages
 
+推送成功之后，会自动生成一个访问地址：`<用户名>.coding.me/<项目名称>`，点击这个地址就可以访问自己的博客了！
+
+此时可能会发现在coding搭建的博客的js路径都是不对的，这时需要修改站点目录下的_config.yml。在使用GithubGages的时候`# URL`这个标签是这样设置的：
+```yaml
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://zhaomin6666.github.io/;
+root: /
+permalink: :category/:title/
+permalink_defaults:
+```
+而在Coding中搭建项目的时候需要如下配置：
+```yaml
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://zm666.coding.me/MYBLOG/
+root: /MYBLOG
+permalink: :category/:title/
+permalink_defaults:
+```
+这样js才能正常显示。
+
+4.申请域名
+申请一个属于自己的域名应该不难，各大服务提供商的都有域名服务。申请完自己的域名之后需要做一下域名解析，也就是把你的域名指向你的博客网址。
+比如我申请的域名为`www.zm6666.top`，在做域名解析时配置说明如下：
+主机记录：也就是你访问的网址，进行跳转。可以把www和@都做解析；
+记录类型：因为Codeing已经为我们提供了可以访问的域名所以这里选择CNAME；
+解析线路：选择默认即可；
+记录值：填写生成的可以访问的地址`https://zm666.coding.me/MYBLOG`；
+TTL：默认5分钟即可。
+做完了域名解析，在Coding静态页面的配置中也需要增加一下配置：
+自定义域名：添加自己申请的域名。
+此时，地址栏中敲入你申请的域名，就可以成功访问你的博客了。当然站点目录下的_config.yml又要做修改了，修改网址为新的网址：
+```yaml
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://www.zm6666.top/
+root: /
+permalink: :category/:title/
+permalink_defaults:
+```
+
+
+
 ----------
-更新日期 2019年4月8日
+更新日期 2019年12月12日
