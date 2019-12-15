@@ -5,9 +5,7 @@ categories:
 
 - LeetCode
 tags:
-- LeetCode 
 - Exercise
-mathjax: true
 ---
 
 * 本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议，转载请注明出处。
@@ -29,4 +27,6 @@ mathjax: true
 | ---- | -------- | ------------- | ----------- | ----------- |
 | 1 | two-sum | [两数之和](../../LeetCode/Leet1_two-sum/) | 简单 | `数组` `哈希表` |
 | 2 | add-two-numbers | [两数相加](../../LeetCode/Leet2_add-two-numbers/) | 中等 | `链表` `数学` |
+| 3 | longest-substring-without-repeating-characters | [无重复字符的最长子串](../../LeetCode/Leet3_longest-substring-without-repeating-characters.md/) | 中等 | `哈希表` `双指针` `字符串` `滑动窗口` |
+| 4 | median-of-two-sorted-arrays | [寻找两个有序数组的中位数](../../LeetCode/Leet4_median-of-two-sorted-arrays/) | 困难 | `数组` `二分查找` `分治` |
 
