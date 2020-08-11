@@ -8,12 +8,12 @@ subtitle:
 description:
 keywords:
 author: 
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://zhaomin6666.github.io/;
+url: http://www.zm6666.top/
 root: /
 permalink: :category/:title/
 permalink_defaults:
@@ -74,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-next-master
+theme: hexo-theme-next-master-new
 
 # live2d
 live2d:
@@ -98,8 +98,5 @@ live2d:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/zhaomin6666/zhaomin6666.github.io.git
+  repository: https://e.coding.net/zm666/MYBLOG.git
   branch: master
-#- type: git
-#  repository: https://git.dev.tencent.com/zm666/MYBLOG.git
-#  branch: master
