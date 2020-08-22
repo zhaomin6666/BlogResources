@@ -104,6 +104,9 @@ baidu_url_submit:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
+#-  type: git
+#  repository: https://github.com/zhaomin6666/zhaomin6666.github.io.git
+#  branch: master
 - type: git
   repository: https://e.coding.net/zm666/MYBLOG.git
   branch: master
