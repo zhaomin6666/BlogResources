@@ -179,13 +179,13 @@ site_state: true
 social:
   GitHub: https://github.com/zhaomin6666 || fab fa-github
   E-Mail: mailto:lanmao_1029@163.com || fa fa-envelope
-  Weibo: https://weibo.com/v5bossv5 || fab fa-weibo
+  #Weibo: https://weibo.com/v5bossv5 || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
   #YouTube: https://youtube.com/yourname || fab fa-youtube
-  Instagram: https://www.instagram.com/bossbigvvvv/ || fab fa-instagram
+  #Instagram: https://www.instagram.com/bossbigvvvv/ || fab fa-instagram
   #Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
