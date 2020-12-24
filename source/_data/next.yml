@@ -40,10 +40,10 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: https://myblog-1258874308.cos.ap-shanghai.myqcloud.com/BlogFrame/pig_32px_1271682_easyicon.net.ico
-  medium: https://myblog-1258874308.cos.ap-shanghai.myqcloud.com/BlogFrame/pig_32px_1271682_easyicon.net.ico
-  apple_touch_icon: https://myblog-1258874308.cos.ap-shanghai.myqcloud.com/BlogFrame/pig_32px_1271682_easyicon.net.ico
-  safari_pinned_tab: https://myblog-1258874308.cos.ap-shanghai.myqcloud.com/BlogFrame/pig_32px_1271682_easyicon.net.ico
+  small: https://myblog-1303447677.cos.ap-shanghai.myqcloud.com/BlogFrame/pig_32px_1271682_easyicon.net.ico
+  medium: https://myblog-1303447677.cos.ap-shanghai.myqcloud.com/BlogFrame/pig_32px_1271682_easyicon.net.ico
+  apple_touch_icon: https://myblog-1303447677.cos.ap-shanghai.myqcloud.com/BlogFrame/pig_32px_1271682_easyicon.net.ico
+  safari_pinned_tab: https://myblog-1303447677.cos.ap-shanghai.myqcloud.com/BlogFrame/pig_32px_1271682_easyicon.net.ico
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -163,7 +163,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://myblog-1258874308.cos.ap-shanghai.myqcloud.com/BlogFrame/my-avatar.jpg
+  url: https://myblog-1303447677.cos.ap-shanghai.myqcloud.com/BlogFrame/my-avatar.png
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -266,8 +266,8 @@ reward_settings:
   #comment: Donate comment here.
 
 reward:
-  wechatpay: https://myblog-1258874308.cos.ap-shanghai.myqcloud.com/BlogFrame/wechatpay.png
-  alipay: https://myblog-1258874308.cos.ap-shanghai.myqcloud.com/BlogFrame/alipay.png
+  wechatpay: https://myblog-1303447677.cos.ap-shanghai.myqcloud.com/BlogFrame/wechatpay.png
+  alipay: https://myblog-1303447677.cos.ap-shanghai.myqcloud.com/BlogFrame/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
 
