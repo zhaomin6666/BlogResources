@@ -99,6 +99,24 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: next
 
+# live2d
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: live2d-widget-model-hijiki
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true
+
 #baidu
 baidu_url_submit:
   count: 5 				     ## 提交最新的五个链接
