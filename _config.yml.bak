@@ -101,7 +101,7 @@ theme: next
 
 # live2d
 live2d:
-  enable: true
+  enable: false
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/
@@ -127,6 +127,7 @@ baidu_url_submit:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
+- type: leancloud_counter_security_sync
 - type: git
   repo: https://e.coding.net/zm666/MYBLOG.git
   branch: master
@@ -134,3 +135,11 @@ deploy:
 
 pandoc:
   pandoc_path: C:/Program Files/Pandoc/pandoc.exe
+
+leancloud_counter_security:
+  enable_sync: true
+  app_id: *************
+  app_key: *************
+  server_url: https://wypthddt.lc-cn-n1-shared.com # Required for apps from CN region, e.g. https://leancloud.cn
+  username: zm6666blog # Will be asked while deploying if is left blank
+  password: ************* # Recommmended to be left blank. Will be asked while deploying if is left blank
