@@ -142,4 +142,11 @@ leancloud_counter_security:
   app_key: *************
   server_url: https://wypthddt.lc-cn-n1-shared.com # Required for apps from CN region, e.g. https://leancloud.cn
   username: zm6666blog # Will be asked while deploying if is left blank
-  password: ************* # Recommmended to be left blank. Will be asked while deploying if is left blank
+  password: ************* # Recommmended to be left blank. Will be asked while deploying if is left blank 
+  
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
