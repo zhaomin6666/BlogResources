@@ -119,7 +119,7 @@ live2d:
 
 #baidu
 baidu_url_submit:
-  count: 5 				     ## 提交最新的五个链接
+  count: 10				     ## 提交最新的五个链接
   host: https://zm6666.top/ 	     ## 百度站长平台中注册的域名
   token: *************	 ## 准入秘钥
   path: baidu_urls.txt 		 ## 文本文档的地址， 新链接会保存在此文本文档里 
@@ -150,3 +150,5 @@ search:
   content: true
   format: html
 
+baidusitemap:
+  path: sitemap.xml
