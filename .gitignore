@@ -7,3 +7,5 @@ public/
 .deploy*/
 _multiconfig.yml
 _posts/
+_config.yml
+_config.next.yml
