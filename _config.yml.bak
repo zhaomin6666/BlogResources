@@ -130,7 +130,8 @@ baidu_url_submit:
 deploy:
 - type: leancloud_counter_security_sync
 - type: git
-  repo: https://e.coding.net/zm666/MYBLOG.git
+  #repo: https://e.coding.net/zm666/MYBLOG.git
+  repo: https://github.com/zhaomin6666/zhaomin6666.github.io.git
   branch: master
 - type: baidu_url_submitter
 
